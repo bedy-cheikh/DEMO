@@ -1,0 +1,61 @@
+table 'SalesLT ProductModel'
+	lineageTag: c2673173-e107-4b51-88f8-0d3405700527
+
+	column ProductModelID
+		dataType: int64
+		formatString: 0
+		lineageTag: c6cf5c13-d21e-4f83-a855-64a4ad320807
+		summarizeBy: none
+		sourceColumn: ProductModelID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Name
+		dataType: string
+		lineageTag: d29b78a8-5b13-4c3e-95a5-146fee7ea729
+		summarizeBy: none
+		sourceColumn: Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column CatalogDescription
+		dataType: string
+		lineageTag: bc04d7d1-410c-45e6-b618-6f78b91552fc
+		summarizeBy: none
+		sourceColumn: CatalogDescription
+
+		annotation SummarizationSetBy = Automatic
+
+	column rowguid
+		dataType: string
+		lineageTag: 3cdeb456-45f6-4c93-b590-eed80a05bf0a
+		summarizeBy: none
+		sourceColumn: rowguid
+
+		annotation SummarizationSetBy = Automatic
+
+	column ModifiedDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c5651042-cbd6-470b-9fe1-6250759e46d3
+		summarizeBy: none
+		sourceColumn: ModifiedDate
+
+		variation Variation
+			isDefault
+			relationship: a47dbf4d-0444-433a-b48c-228be4a33e4e
+			defaultHierarchy: LocalDateTable_cbac9660-7f7b-4030-b049-d934991cee1f.'Hiérarchie de dates'
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'SalesLT ProductModel' = m
+		mode: import
+		source =
+				let
+				    Source = Sql.Database("FR-DTCKDS3", "AdventureWorksLT2022"),
+				    SalesLT_ProductModel = Source{[Schema="SalesLT",Item="ProductModel"]}[Data]
+				in
+				    SalesLT_ProductModel
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,29 @@
+model Model
+	culture: fr-FR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: fr-FR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["SalesLT Product","SalesLT ProductCategory","SalesLT ProductModel","SalesLT SalesOrderDetail"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table 'SalesLT Product'
+ref table DateTableTemplate_7e838047-7ed5-4163-b6f4-dd1f6eb5cabc
+ref table LocalDateTable_3f7996cf-71ae-4196-ab6b-423f28daf26e
+ref table LocalDateTable_75140967-871d-497a-a4ce-5fdb0bef0fcf
+ref table LocalDateTable_d7da2082-6829-4cb1-941d-51c609a00f81
+ref table LocalDateTable_9d35c273-3614-46f0-932f-0a362764f7b2
+ref table 'SalesLT ProductCategory'
+ref table LocalDateTable_a537a05b-1b7e-4989-9da6-8abf16e79673
+ref table 'SalesLT ProductModel'
+ref table LocalDateTable_cbac9660-7f7b-4030-b049-d934991cee1f
+ref table 'SalesLT SalesOrderDetail'
+ref table LocalDateTable_d8374f54-6fd9-47be-aa2f-0af36246bad0
+
+ref cultureInfo fr-FR
+

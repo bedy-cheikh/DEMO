@@ -1,0 +1,53 @@
+relationship 308a69df-ab66-4dac-a9a7-5e8f3aea5430
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT Product'.SellStartDate
+	toColumn: LocalDateTable_3f7996cf-71ae-4196-ab6b-423f28daf26e.Date
+
+relationship e62a54d5-568b-434c-b01a-bd40ecfdff53
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT Product'.SellEndDate
+	toColumn: LocalDateTable_75140967-871d-497a-a4ce-5fdb0bef0fcf.Date
+
+relationship 6b454955-b8cf-43d4-9fee-664fe83667b2
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT Product'.DiscontinuedDate
+	toColumn: LocalDateTable_d7da2082-6829-4cb1-941d-51c609a00f81.Date
+
+relationship c6f16ac1-396a-4a75-a790-0604b60b304f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT Product'.ModifiedDate
+	toColumn: LocalDateTable_9d35c273-3614-46f0-932f-0a362764f7b2.Date
+
+relationship 081ff42c-764c-4892-9010-5eb7ec097953
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT ProductCategory'.ModifiedDate
+	toColumn: LocalDateTable_a537a05b-1b7e-4989-9da6-8abf16e79673.Date
+
+relationship a47dbf4d-0444-433a-b48c-228be4a33e4e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT ProductModel'.ModifiedDate
+	toColumn: LocalDateTable_cbac9660-7f7b-4030-b049-d934991cee1f.Date
+
+relationship f92e3441-0e7e-498c-ac07-390f98f0e230
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'SalesLT SalesOrderDetail'.ModifiedDate
+	toColumn: LocalDateTable_d8374f54-6fd9-47be-aa2f-0af36246bad0.Date
+
+relationship 2cbff300-95ac-411b-a8e1-a107554b5583
+	fromColumn: 'SalesLT Product'.ProductCategoryID
+	toColumn: 'SalesLT ProductCategory'.ProductCategoryID
+
+	annotation PBI_IsFromSource = FS
+
+relationship ba9601a4-a535-4af1-9542-43ed2fdb910b
+	fromColumn: 'SalesLT Product'.ProductModelID
+	toColumn: 'SalesLT ProductModel'.ProductModelID
+
+	annotation PBI_IsFromSource = FS
+
+relationship ee15f2ac-b5c1-42ba-af0a-5672c0937148
+	fromColumn: 'SalesLT SalesOrderDetail'.ProductID
+	toColumn: 'SalesLT Product'.ProductID
+
+	annotation PBI_IsFromSource = FS
+
