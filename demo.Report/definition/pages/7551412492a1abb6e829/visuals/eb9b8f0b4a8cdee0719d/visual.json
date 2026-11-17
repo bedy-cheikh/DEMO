@@ -1,0 +1,150 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "eb9b8f0b4a8cdee0719d",
+  "position": {
+    "x": 68.610864503593035,
+    "y": 436.36509824285167,
+    "z": 1,
+    "height": 284.04897904487513,
+    "width": 1154.0347409504348,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT ProductModel"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "SalesLT ProductModel.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT Product"
+                    }
+                  },
+                  "Property": "Size"
+                }
+              },
+              "queryRef": "SalesLT Product.Size",
+              "nativeQueryRef": "Size"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT Product"
+                    }
+                  },
+                  "Property": "Color"
+                }
+              },
+              "queryRef": "SalesLT Product.Color",
+              "nativeQueryRef": "Color"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesLT Product"
+                        }
+                      },
+                      "Property": "ListPrice"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(SalesLT Product.ListPrice)",
+              "nativeQueryRef": "Somme de ListPrice"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "2603caf22e3b03334179",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SalesLT ProductModel"
+              }
+            },
+            "Property": "Name"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f116c65a99dc32d30c17",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SalesLT Product"
+              }
+            },
+            "Property": "Size"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "7d7fc3a68878c450750a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "SalesLT Product"
+              }
+            },
+            "Property": "Color"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "ac93b4f88c9a3c1a7495",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "SalesLT Product"
+                  }
+                },
+                "Property": "ListPrice"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
