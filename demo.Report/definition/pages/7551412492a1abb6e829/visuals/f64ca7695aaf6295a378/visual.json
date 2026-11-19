@@ -1,0 +1,85 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "name": "f64ca7695aaf6295a378",
+  "position": {
+    "x": 654.2154287079054,
+    "y": 436.55122999761164,
+    "z": 2,
+    "height": 283.69715786959637,
+    "width": 531.93217100549316,
+    "tabOrder": 2
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT ProductModel"
+                    }
+                  },
+                  "Property": "Name"
+                }
+              },
+              "queryRef": "SalesLT ProductModel.Name",
+              "nativeQueryRef": "Name"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT Product"
+                    }
+                  },
+                  "Property": "Size"
+                }
+              },
+              "queryRef": "SalesLT Product.Size",
+              "nativeQueryRef": "Size"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "SalesLT Product"
+                    }
+                  },
+                  "Property": "Color"
+                }
+              },
+              "queryRef": "SalesLT Product.Color",
+              "nativeQueryRef": "Color"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "SalesLT Product"
+                        }
+                      },
+                      "Property": "ListPrice"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(SalesLT Product.ListPrice)",
+              "nativeQueryRef": "Somme de ListPrice"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
